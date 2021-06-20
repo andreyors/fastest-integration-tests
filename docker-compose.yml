@@ -1,0 +1,39 @@
+version: '3'
+services:
+  db:
+    image: circleci/postgres:12-alpine-ram
+    ports:
+      - "5432:5432"
+
+  app:
+    restart: always
+    image: portfolio
+    build:
+      context: .
+      target: dev
+    environment:
+      - DJANGO_SECRET_KEY=local
+    stdin_open: true
+    tty: true
+    command: >
+      bash -c "python wait_for_postgres.py &&
+               ./manage.py migrate &&
+               ./manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  documentation:
+    restart: always
+    image: portfolio
+    build:
+      context: .
+      target: dev
+    command: "mkdocs serve"
+    volumes:
+      - ./:/code
+    ports:
+      - "8001:8001"

@@ -1,0 +1,12 @@
+site_name: app
+site_description: fastest integration
+repo_url: https://github.com/andreyors/fastest-integration-tests
+site_dir: site
+copyright: Copyright &copy; 2021, <a href="https://github.com/andreyors">andreyors</a>.
+dev_addr: 0.0.0.0:8001
+
+nav:
+  - Home: 'index.md'
+  - API:
+    - Authentication: 'api/authentication.md'
+    - Users: 'api/users.md'
