@@ -159,7 +159,7 @@ python-versions = "*"
 
 [[package]]
 name = "django"
-version = "3.2.12"
+version = "3.2.15"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
@@ -171,8 +171,8 @@ pytz = "*"
 sqlparse = ">=0.2.2"
 
 [package.extras]
-argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
+argon2 = ["argon2-cffi (>=19.1.0)"]
 
 [[package]]
 name = "django-configurations"
@@ -186,11 +186,11 @@ python-versions = "*"
 six = "*"
 
 [package.extras]
-cache = ["django-cache-url"]
-database = ["dj-database-url"]
-email = ["dj-email-url"]
+testing = ["Sphinx (>=1.4)", "dj-search-url", "dj-email-url", "dj-database-url", "django-cache-url (>=1.0.0)", "mock", "django-discover-runner"]
 search = ["dj-search-url"]
-testing = ["django-discover-runner", "mock", "django-cache-url (>=1.0.0)", "dj-database-url", "dj-email-url", "dj-search-url", "Sphinx (>=1.4)"]
+email = ["dj-email-url"]
+database = ["dj-database-url"]
+cache = ["django-cache-url"]
 
 [[package]]
 name = "django-filter"
@@ -540,9 +540,9 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-build = ["twine", "wheel", "blurb"]
+test = ["pytest-cov", "pytest (<5.4)"]
 docs = ["sphinx"]
-test = ["pytest (<5.4)", "pytest-cov"]
+build = ["blurb", "wheel", "twine"]
 
 [[package]]
 name = "mypy-extensions"
@@ -600,8 +600,8 @@ optional = false
 python-versions = ">=3.6"
 
 [package.extras]
-qa = ["flake8 (==3.8.3)", "mypy (==0.782)"]
-testing = ["docopt", "pytest (<6.0.0)"]
+testing = ["pytest (<6.0.0)", "docopt"]
+qa = ["mypy (==0.782)", "flake8 (==3.8.3)"]
 
 [[package]]
 name = "pathspec"
@@ -892,7 +892,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "e4fb2bf17f9f0fa884e556b5db6e2c97a3ece2a255ae762c59f9eb504e38fa5d"
+content-hash = "dc170a32b898f47d07e39f52d11bed96d479b01574f6992edf99003f848f91bc"
 
 [metadata.files]
 appdirs = [
@@ -1007,8 +1007,8 @@ dj-database-url = [
     {file = "dj_database_url-0.5.0-py2.py3-none-any.whl", hash = "sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9"},
 ]
 django = [
-    {file = "Django-3.2.12-py3-none-any.whl", hash = "sha256:9b06c289f9ba3a8abea16c9c9505f25107809fb933676f6c891ded270039d965"},
-    {file = "Django-3.2.12.tar.gz", hash = "sha256:9772e6935703e59e993960832d66a614cf0233a1c5123bc6224ecc6ad69e41e2"},
+    {file = "Django-3.2.15-py3-none-any.whl", hash = "sha256:115baf5049d5cf4163e43492cdc7139c306ed6d451e7d3571fe9612903903713"},
+    {file = "Django-3.2.15.tar.gz", hash = "sha256:f71934b1a822f14a86c9ac9634053689279cd04ae69cb6ade4a59471b886582b"},
 ]
 django-configurations = [
     {file = "django-configurations-2.2.tar.gz", hash = "sha256:9e3bcea1355ac50a4c9f854f751d214cb17e5f8adf18405a4488d0a1e8945915"},
