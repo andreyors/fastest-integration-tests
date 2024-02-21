@@ -11,7 +11,7 @@ authors = ["Andrey Orsoev <andrey.orsoev@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.9"
 pytz = "^2021.1"
-Django = "^3.2.19"
+Django = "^3.2.24"
 django-configurations = "^2.2"
 psycopg2-binary = "^2.9.1"
 dj-database-url = "^0.5.0"
